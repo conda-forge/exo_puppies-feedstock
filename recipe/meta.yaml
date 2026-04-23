@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/exo_puppies-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/exo_puppies-{{ version }}.tar.gz
   sha256: 672d6cfcb9bc6f6380cc1c4dd6984fe02ee90a4ae026766722583f4f77ea759d
 
 build:
   entry_points:
     - pup = puppies.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   skip: true  # [win]
   skip: true  # [py<36]
 
